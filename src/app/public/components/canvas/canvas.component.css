@@ -1,0 +1,11 @@
+:host {
+  display: block;
+  min-height: 500px;
+  height: 100%;
+  width: 100%;
+}
+
+#konva-holder {
+  display: flex;
+  justify-content: center;
+}

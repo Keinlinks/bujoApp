@@ -1,0 +1,11 @@
+<nav>
+  <ul>
+    <li
+      *ngFor="let month of months; let i = index"
+      (click)="clickNav(i)"
+      [ngClass]="{ activatedRoute: monthIndex == i }"
+    >
+      {{ month }}
+    </li>
+  </ul>
+</nav>

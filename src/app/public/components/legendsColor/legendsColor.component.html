@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="colors">
+    <h2>Intensity</h2>
+    <ul>
+      <li>
+        <div
+          class="figure"
+          [ngStyle]="{ 'background-color': color.level_1 }"
+          (click)="clickOnColor(color.level_1, 1)"
+        ></div>
+        <p>Very little</p>
+      </li>
+      <li>
+        <div
+          class="figure"
+          [ngStyle]="{ 'background-color': color.level_2 }"
+          (click)="clickOnColor(color.level_2, 2)"
+        ></div>
+        <p>Few</p>
+      </li>
+      <li>
+        <div
+          class="figure"
+          [ngStyle]="{ 'background-color': color.level_3 }"
+          (click)="clickOnColor(color.level_3, 3)"
+        ></div>
+        <p>So so</p>
+      </li>
+      <li>
+        <div
+          class="figure"
+          [ngStyle]="{ 'background-color': color.level_4 }"
+          (click)="clickOnColor(color.level_4, 4)"
+        ></div>
+        <p>Sufficiently</p>
+      </li>
+      <li>
+        <div
+          class="figure"
+          [ngStyle]="{ 'background-color': color.level_5 }"
+          (click)="clickOnColor(color.level_5, 5)"
+        ></div>
+        <p>Too much</p>
+      </li>
+      <li>
+        <div
+          class="figure"
+          [ngStyle]="{ border: '1px solid #000' }"
+          (click)="clickOnColor('white', 0)"
+        ></div>
+        <p>Delete</p>
+      </li>
+    </ul>
+  </div>
+</div>

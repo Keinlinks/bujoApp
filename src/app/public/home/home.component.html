@@ -1,0 +1,16 @@
+<main class="main">
+  <div class="year">
+    <select (change)="changeYear($event)">
+      <option [value]="year" *ngFor="let year of years">{{ year }}</option>
+    </select>
+  </div>
+  <div>
+    <app-nav></app-nav>
+  </div>
+
+  <app-legends-color></app-legends-color>
+
+  <div class="canvas">
+    <app-canvas></app-canvas>
+  </div>
+</main>

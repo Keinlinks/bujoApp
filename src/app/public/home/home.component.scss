@@ -1,0 +1,24 @@
+:host {
+  display: block;
+}
+
+.main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(200px, 0.2fr) minmax(500px, 1fr);
+  grid-template-rows: minmax(100px, 0.2fr) 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.canvas {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.year {
+  padding: 2rem;
+  font-size: 3rem;
+  select {
+    font-size: 3rem;
+    border-radius: 7px;
+  }
+}

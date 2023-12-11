@@ -1,0 +1,29 @@
+:host {
+  position: relative;
+  padding: 2.8rem 0;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+}
+li {
+  text-align: center;
+  margin: 1.4rem 0;
+  font-size: 1.2rem;
+  p {
+    margin: 0.2rem 0;
+  }
+}
+.figure {
+  width: 80px;
+  height: 40px;
+  margin: 0 auto;
+  border-radius: 7px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.centerText {
+  text-align: center;
+}

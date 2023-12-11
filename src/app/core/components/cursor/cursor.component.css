@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  position: fixed;
+}
+
+div {
+  width: 16px;
+  height: 16px;
+  animation-name: Animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+}
+
+@keyframes Animation {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
+  }
+}
