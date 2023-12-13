@@ -17,7 +17,7 @@ export class ColorService {
 
   mapColor(intensity: number, idTheme: number) {
     const theme = this.colorThemes.getValue().find((theme) => {
-      return theme.id == idTheme;
+      return theme.id == this.colorSelected.getValue();
     });
     if (theme) {
       switch (intensity) {
@@ -38,7 +38,11 @@ export class ColorService {
     return 'transparent';
   }
 
-  getActualColorTheme(): Observable<number> {
-    return this.colorSelected.asObservable();
+  getActualColorTheme(): Observable<Color[]> {
+    return this.colorThemes.asObservable();
+  }
+  setColorIndex(index: number) {
+    this.colorSelected.next(index);
+    this.colorThemes.next(this.colorThemes.getValue());
   }
 }

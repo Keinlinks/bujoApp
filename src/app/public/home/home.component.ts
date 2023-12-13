@@ -4,11 +4,18 @@ import { CanvasComponent } from '../components/canvas/canvas.component';
 import { NavComponent } from '../components/nav/nav.component';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LegendsColorComponent } from '../components/legendsColor/legendsColor.component';
+import { ColorInputComponent } from '../components/colorInput/colorInput.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CanvasComponent, NavComponent, LegendsColorComponent, NgFor],
+  imports: [
+    CanvasComponent,
+    NavComponent,
+    LegendsColorComponent,
+    NgFor,
+    ColorInputComponent,
+  ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

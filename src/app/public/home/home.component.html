@@ -3,6 +3,7 @@
     <select (change)="changeYear($event)">
       <option [value]="year" *ngFor="let year of years">{{ year }}</option>
     </select>
+    <app-color-input></app-color-input>
   </div>
   <div>
     <app-nav></app-nav>

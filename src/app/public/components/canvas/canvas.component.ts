@@ -88,13 +88,28 @@ export class CanvasComponent implements OnInit {
         this.printCanvas(width, parentScale.height);
       }
     });
+    this.colorService.getActualColorTheme().subscribe(() => {
+      if (this.mainData) {
+        const objetive = this.mainData[this.indexObjetive || 0];
+        const objetiveByYear = objetive.MainData.find((data) => {
+          return data.year == this.year;
+        });
+        if (objetiveByYear) {
+          this.printCanvas(width, parentScale.height, objetiveByYear);
+        } else {
+          this.printCanvas(width, parentScale.height);
+        }
+      } else {
+        this.printCanvas(width, parentScale.height);
+      }
+    });
   }
 
   printCanvas(
     width: number,
     height: number,
     objetive?: ObjectiveMainData,
-    theme: number = 0
+    theme: number = this.colorService.colorSelected.getValue()
   ) {
     this.objectReferences = [];
     this.stage = this.getStage(width, height);

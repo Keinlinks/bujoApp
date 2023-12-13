@@ -10,7 +10,7 @@ import { CursorService } from 'src/app/core/services/cursor.service';
   imports: [CommonModule],
   templateUrl: `./legendsColor.component.html`,
   styleUrls: ['./legendsColor.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.Default,
 })
 export class LegendsColorComponent implements OnInit {
   constructor(
@@ -21,7 +21,7 @@ export class LegendsColorComponent implements OnInit {
 
   ngOnInit(): void {
     this.colorService.getActualColorTheme().subscribe((colorSelected) => {
-      this.color = this.colorService.colorThemes.getValue()[colorSelected];
+      this.color = colorSelected[this.colorService.colorSelected.getValue()];
     });
   }
 

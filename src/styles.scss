@@ -12,6 +12,9 @@
 body {
   color: var(--primary-text-color);
   background-color: var(--background-color);
+  background-image: url("./assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 button {
